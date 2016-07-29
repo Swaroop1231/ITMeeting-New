@@ -11,9 +11,9 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class RegisterViewController: UIViewController
 {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var nameTextfield: UITextField!
@@ -45,47 +45,61 @@ class ViewController: UIViewController
         self.loginButton.layer.borderColor = whitecolor().CGColor
         self.loginButton.layer.borderWidth = 1.0
         self.loginButton.layer.cornerRadius = 5
-
+        
         
         
     }
     
     
-    @IBAction func loginAction(sender: AnyObject)
-    {
-        let coredataObj = CoreDataHelper()
-        
-       let boolVal =  coredataObj.fetchStudentDetails(nameTextfield.text!, password: passwordtextfield.text!)
-        
-        if  boolVal==true
-        {
-            let detail = self.storyboard?.instantiateViewControllerWithIdentifier("StudentViewController") as! StudentViewController
-            self.navigationController?.pushViewController(detail, animated: true)
-        }
-        else
-        {
-            
-            let alertController = UIAlertController(title: "Alert.!", message: "Please check login details.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-
-        }
-        
-        
-    }
     
     func whitecolor()->UIColor
     {
-    
+        
         return UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         
     }
+    
+    
+    
+    
+    @IBAction func registerButtonAction(sender: AnyObject)
+    {
+        let coredataObj = CoreDataHelper()
+        
+        let boolVal = coredataObj.saveStudentRegisterDetails(nameTextfield.text!, password: passwordtextfield.text!)
+        
+        if  boolVal==true
+        {
+            
+            
+            let alertController = UIAlertController(title: "Alert", message: "Details saved.", preferredStyle: UIAlertControllerStyle.Alert)
 
+            let saveAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler:
+                {
+                alert -> Void in
+                    self.navigationController?.popViewControllerAnimated(true)
+
+            })
+
+            alertController.addAction(saveAction)
+
+            self.presentViewController(alertController, animated: true, completion: nil)
+
+            
+        }
+        
+
+        
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

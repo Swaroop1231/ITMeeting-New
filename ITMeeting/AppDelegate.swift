@@ -15,8 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
         // Override point for customization after application launch.
+        saveCompanyDetails()
         return true
     }
 
@@ -43,6 +45,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
+    
+    func saveCompanyDetails() -> Void
+    {
+        
+              
+        var company1 = [String:String]()
+        company1["name"] = "Infosys"
+        company1["meetingDesc"] = "klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj"
+        company1["date"] = "11-02-2016"
+        company1["time"] = "11:15AM"
+        company1["offeringintern"] = "YES"
+        company1["website"] = "www.infosys.com"
+        company1["location"] = "Seminar Hall-1,Tower 4, NW University"
+        company1["id"] = "0"
+
+
+        
+        let coredataObj = CoreDataHelper()
+        
+        let boolVal = coredataObj.saveCompanyDetails(company1)
+        
+        if  boolVal==true
+        {
+
+
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
 
     // MARK: - Core Data stack
 

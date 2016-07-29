@@ -7,15 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523E31051D4B240600377F10 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31041D4B240600377F10 /* CoreDataHelper.swift */; };
+		523E31071D4B244000377F10 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31061D4B244000377F10 /* RegisterViewController.swift */; };
+		523E31091D4B27C000377F10 /* backgrnd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523E31081D4B27C000377F10 /* backgrnd.jpg */; };
+		523E310C1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E310A1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift */; };
+		523E310D1D4B297E00377F10 /* StudentRegisterDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E310B1D4B297E00377F10 /* StudentRegisterDetails.swift */; };
+		523E310F1D4B2E4D00377F10 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E310E1D4B2E4D00377F10 /* StudentViewController.swift */; };
+		523E31111D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31101D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift */; };
+		523E31171D4B34F600377F10 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31161D4B34F600377F10 /* CompanyTableViewCell.swift */; };
+		523E311D1D4B37EB00377F10 /* Calendar-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 523E311C1D4B37EB00377F10 /* Calendar-27.png */; };
+		523E311F1D4B37F500377F10 /* Alarm Clock-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 523E311E1D4B37F500377F10 /* Alarm Clock-27.png */; };
+		523E31251D4B4EFA00377F10 /* CompanyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31241D4B4EFA00377F10 /* CompanyDetailsViewController.swift */; };
+		523E31281D4B557400377F10 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 523E31261D4B557400377F10 /* check.png */; };
+		523E31291D4B557400377F10 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 523E31271D4B557400377F10 /* cross.png */; };
+		523E31341D4B69EC00377F10 /* CompanyDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31321D4B69EC00377F10 /* CompanyDetails+CoreDataProperties.swift */; };
+		523E31351D4B69EC00377F10 /* CompanyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31331D4B69EC00377F10 /* CompanyDetails.swift */; };
+		523E31381D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31361D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift */; };
+		523E31391D4B725400377F10 /* FavouriteMeetingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31371D4B725400377F10 /* FavouriteMeetingDetails.swift */; };
 		527461221D4B1A4D0020347E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527461211D4B1A4D0020347E /* AppDelegate.swift */; };
 		527461241D4B1A4D0020347E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527461231D4B1A4D0020347E /* ViewController.swift */; };
 		527461271D4B1A4D0020347E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527461251D4B1A4D0020347E /* Main.storyboard */; };
 		5274612A1D4B1A4D0020347E /* ITMeeting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527461281D4B1A4D0020347E /* ITMeeting.xcdatamodeld */; };
 		5274612C1D4B1A4D0020347E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5274612B1D4B1A4D0020347E /* Assets.xcassets */; };
 		5274612F1D4B1A4D0020347E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5274612D1D4B1A4D0020347E /* LaunchScreen.storyboard */; };
+		527461371D4B1AA90020347E /* meeting.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 527461361D4B1AA90020347E /* meeting.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		523E31041D4B240600377F10 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		523E31061D4B244000377F10 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		523E31081D4B27C000377F10 /* backgrnd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgrnd.jpg; sourceTree = "<group>"; };
+		523E310A1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StudentRegisterDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		523E310B1D4B297E00377F10 /* StudentRegisterDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentRegisterDetails.swift; sourceTree = "<group>"; };
+		523E310E1D4B2E4D00377F10 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		523E31101D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipatingCompaniesViewController.swift; sourceTree = "<group>"; };
+		523E31161D4B34F600377F10 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		523E311C1D4B37EB00377F10 /* Calendar-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-27.png"; sourceTree = "<group>"; };
+		523E311E1D4B37F500377F10 /* Alarm Clock-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Alarm Clock-27.png"; sourceTree = "<group>"; };
+		523E31241D4B4EFA00377F10 /* CompanyDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailsViewController.swift; sourceTree = "<group>"; };
+		523E31261D4B557400377F10 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		523E31271D4B557400377F10 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		523E31321D4B69EC00377F10 /* CompanyDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CompanyDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		523E31331D4B69EC00377F10 /* CompanyDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetails.swift; sourceTree = "<group>"; };
+		523E31361D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouriteMeetingDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		523E31371D4B725400377F10 /* FavouriteMeetingDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteMeetingDetails.swift; sourceTree = "<group>"; };
 		5274611E1D4B1A4D0020347E /* ITMeeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITMeeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527461211D4B1A4D0020347E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527461231D4B1A4D0020347E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +59,7 @@
 		5274612B1D4B1A4D0020347E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5274612E1D4B1A4D0020347E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		527461301D4B1A4D0020347E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		527461361D4B1AA90020347E /* meeting.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meeting.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +92,31 @@
 		527461201D4B1A4D0020347E /* ITMeeting */ = {
 			isa = PBXGroup;
 			children = (
+				523E311C1D4B37EB00377F10 /* Calendar-27.png */,
+				527461361D4B1AA90020347E /* meeting.jpeg */,
+				523E31261D4B557400377F10 /* check.png */,
+				523E31271D4B557400377F10 /* cross.png */,
+				523E311E1D4B37F500377F10 /* Alarm Clock-27.png */,
+				523E31081D4B27C000377F10 /* backgrnd.jpg */,
 				527461211D4B1A4D0020347E /* AppDelegate.swift */,
 				527461231D4B1A4D0020347E /* ViewController.swift */,
+				523E31061D4B244000377F10 /* RegisterViewController.swift */,
+				523E310E1D4B2E4D00377F10 /* StudentViewController.swift */,
+				523E31101D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift */,
+				523E31241D4B4EFA00377F10 /* CompanyDetailsViewController.swift */,
+				523E31161D4B34F600377F10 /* CompanyTableViewCell.swift */,
+				523E31041D4B240600377F10 /* CoreDataHelper.swift */,
 				527461251D4B1A4D0020347E /* Main.storyboard */,
 				5274612B1D4B1A4D0020347E /* Assets.xcassets */,
 				5274612D1D4B1A4D0020347E /* LaunchScreen.storyboard */,
 				527461301D4B1A4D0020347E /* Info.plist */,
 				527461281D4B1A4D0020347E /* ITMeeting.xcdatamodeld */,
+				523E31361D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift */,
+				523E31371D4B725400377F10 /* FavouriteMeetingDetails.swift */,
+				523E31321D4B69EC00377F10 /* CompanyDetails+CoreDataProperties.swift */,
+				523E31331D4B69EC00377F10 /* CompanyDetails.swift */,
+				523E310A1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift */,
+				523E310B1D4B297E00377F10 /* StudentRegisterDetails.swift */,
 			);
 			path = ITMeeting;
 			sourceTree = "<group>";
@@ -125,9 +179,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523E31291D4B557400377F10 /* cross.png in Resources */,
+				523E31091D4B27C000377F10 /* backgrnd.jpg in Resources */,
+				527461371D4B1AA90020347E /* meeting.jpeg in Resources */,
 				5274612F1D4B1A4D0020347E /* LaunchScreen.storyboard in Resources */,
+				523E311F1D4B37F500377F10 /* Alarm Clock-27.png in Resources */,
 				5274612C1D4B1A4D0020347E /* Assets.xcassets in Resources */,
+				523E311D1D4B37EB00377F10 /* Calendar-27.png in Resources */,
 				527461271D4B1A4D0020347E /* Main.storyboard in Resources */,
+				523E31281D4B557400377F10 /* check.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +199,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				527461241D4B1A4D0020347E /* ViewController.swift in Sources */,
+				523E31391D4B725400377F10 /* FavouriteMeetingDetails.swift in Sources */,
+				523E31071D4B244000377F10 /* RegisterViewController.swift in Sources */,
+				523E31111D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift in Sources */,
+				523E310D1D4B297E00377F10 /* StudentRegisterDetails.swift in Sources */,
+				523E31381D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift in Sources */,
 				527461221D4B1A4D0020347E /* AppDelegate.swift in Sources */,
+				523E31351D4B69EC00377F10 /* CompanyDetails.swift in Sources */,
+				523E31171D4B34F600377F10 /* CompanyTableViewCell.swift in Sources */,
+				523E31341D4B69EC00377F10 /* CompanyDetails+CoreDataProperties.swift in Sources */,
+				523E310F1D4B2E4D00377F10 /* StudentViewController.swift in Sources */,
+				523E31051D4B240600377F10 /* CoreDataHelper.swift in Sources */,
+				523E31251D4B4EFA00377F10 /* CompanyDetailsViewController.swift in Sources */,
 				5274612A1D4B1A4D0020347E /* ITMeeting.xcdatamodeld in Sources */,
+				523E310C1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +362,7 @@
 				527461351D4B1A4D0020347E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
