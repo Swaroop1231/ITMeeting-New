@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		523E31051D4B240600377F10 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31041D4B240600377F10 /* CoreDataHelper.swift */; };
 		523E31071D4B244000377F10 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E31061D4B244000377F10 /* RegisterViewController.swift */; };
-		523E31091D4B27C000377F10 /* backgrnd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523E31081D4B27C000377F10 /* backgrnd.jpg */; };
+		523E31091D4B27C000377F10 /* backgrnd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 523E31081D4B27C000377F10 /* backgrnd1.jpg */; };
 		523E310C1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E310A1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift */; };
 		523E310D1D4B297E00377F10 /* StudentRegisterDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E310B1D4B297E00377F10 /* StudentRegisterDetails.swift */; };
 		523E310F1D4B2E4D00377F10 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E310E1D4B2E4D00377F10 /* StudentViewController.swift */; };
@@ -31,12 +31,16 @@
 		5274612C1D4B1A4D0020347E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5274612B1D4B1A4D0020347E /* Assets.xcassets */; };
 		5274612F1D4B1A4D0020347E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5274612D1D4B1A4D0020347E /* LaunchScreen.storyboard */; };
 		527461371D4B1AA90020347E /* meeting.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 527461361D4B1AA90020347E /* meeting.jpeg */; };
+		E5DB91161D4B9F8E00635B98 /* AttendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB91151D4B9F8E00635B98 /* AttendingViewController.swift */; };
+		E5DB91181D4BBCE700635B98 /* backgrnd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5DB91171D4BBCE700635B98 /* backgrnd.jpg */; };
+		E5F2081F1D4CA92C00774F85 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2081E1D4CA92C00774F85 /* CreditsViewController.swift */; };
+		E5F208211D4CAA2F00774F85 /* collegeLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E5F208201D4CAA2F00774F85 /* collegeLogo.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		523E31041D4B240600377F10 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		523E31061D4B244000377F10 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		523E31081D4B27C000377F10 /* backgrnd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgrnd.jpg; sourceTree = "<group>"; };
+		523E31081D4B27C000377F10 /* backgrnd1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgrnd1.jpg; sourceTree = "<group>"; };
 		523E310A1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StudentRegisterDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		523E310B1D4B297E00377F10 /* StudentRegisterDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentRegisterDetails.swift; sourceTree = "<group>"; };
 		523E310E1D4B2E4D00377F10 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,10 @@
 		5274612E1D4B1A4D0020347E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		527461301D4B1A4D0020347E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527461361D4B1AA90020347E /* meeting.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meeting.jpeg; sourceTree = "<group>"; };
+		E5DB91151D4B9F8E00635B98 /* AttendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendingViewController.swift; sourceTree = "<group>"; };
+		E5DB91171D4BBCE700635B98 /* backgrnd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgrnd.jpg; sourceTree = "<group>"; };
+		E5F2081E1D4CA92C00774F85 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		E5F208201D4CAA2F00774F85 /* collegeLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = collegeLogo.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,24 +100,60 @@
 		527461201D4B1A4D0020347E /* ITMeeting */ = {
 			isa = PBXGroup;
 			children = (
+				E5F208251D4CB05900774F85 /* CoreData */,
+				E5F208221D4CB03600774F85 /* Images */,
+				E5F208231D4CB04500774F85 /* ViewControllers */,
+				E5F208241D4CB04F00774F85 /* Storyboard */,
+				5274612B1D4B1A4D0020347E /* Assets.xcassets */,
+				5274612D1D4B1A4D0020347E /* LaunchScreen.storyboard */,
+				527461301D4B1A4D0020347E /* Info.plist */,
+			);
+			path = ITMeeting;
+			sourceTree = "<group>";
+		};
+		E5F208221D4CB03600774F85 /* Images */ = {
+			isa = PBXGroup;
+			children = (
 				523E311C1D4B37EB00377F10 /* Calendar-27.png */,
 				527461361D4B1AA90020347E /* meeting.jpeg */,
 				523E31261D4B557400377F10 /* check.png */,
+				E5DB91171D4BBCE700635B98 /* backgrnd.jpg */,
 				523E31271D4B557400377F10 /* cross.png */,
+				E5F208201D4CAA2F00774F85 /* collegeLogo.jpeg */,
 				523E311E1D4B37F500377F10 /* Alarm Clock-27.png */,
-				523E31081D4B27C000377F10 /* backgrnd.jpg */,
+				523E31081D4B27C000377F10 /* backgrnd1.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E5F208231D4CB04500774F85 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				527461211D4B1A4D0020347E /* AppDelegate.swift */,
 				527461231D4B1A4D0020347E /* ViewController.swift */,
 				523E31061D4B244000377F10 /* RegisterViewController.swift */,
 				523E310E1D4B2E4D00377F10 /* StudentViewController.swift */,
 				523E31101D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift */,
 				523E31241D4B4EFA00377F10 /* CompanyDetailsViewController.swift */,
+				E5DB91151D4B9F8E00635B98 /* AttendingViewController.swift */,
 				523E31161D4B34F600377F10 /* CompanyTableViewCell.swift */,
+				E5F2081E1D4CA92C00774F85 /* CreditsViewController.swift */,
 				523E31041D4B240600377F10 /* CoreDataHelper.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E5F208241D4CB04F00774F85 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
 				527461251D4B1A4D0020347E /* Main.storyboard */,
-				5274612B1D4B1A4D0020347E /* Assets.xcassets */,
-				5274612D1D4B1A4D0020347E /* LaunchScreen.storyboard */,
-				527461301D4B1A4D0020347E /* Info.plist */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		E5F208251D4CB05900774F85 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
 				527461281D4B1A4D0020347E /* ITMeeting.xcdatamodeld */,
 				523E31361D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift */,
 				523E31371D4B725400377F10 /* FavouriteMeetingDetails.swift */,
@@ -118,7 +162,7 @@
 				523E310A1D4B297E00377F10 /* StudentRegisterDetails+CoreDataProperties.swift */,
 				523E310B1D4B297E00377F10 /* StudentRegisterDetails.swift */,
 			);
-			path = ITMeeting;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,11 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				523E31291D4B557400377F10 /* cross.png in Resources */,
-				523E31091D4B27C000377F10 /* backgrnd.jpg in Resources */,
+				523E31091D4B27C000377F10 /* backgrnd1.jpg in Resources */,
+				E5DB91181D4BBCE700635B98 /* backgrnd.jpg in Resources */,
 				527461371D4B1AA90020347E /* meeting.jpeg in Resources */,
 				5274612F1D4B1A4D0020347E /* LaunchScreen.storyboard in Resources */,
 				523E311F1D4B37F500377F10 /* Alarm Clock-27.png in Resources */,
 				5274612C1D4B1A4D0020347E /* Assets.xcassets in Resources */,
+				E5F208211D4CAA2F00774F85 /* collegeLogo.jpeg in Resources */,
 				523E311D1D4B37EB00377F10 /* Calendar-27.png in Resources */,
 				527461271D4B1A4D0020347E /* Main.storyboard in Resources */,
 				523E31281D4B557400377F10 /* check.png in Resources */,
@@ -198,11 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DB91161D4B9F8E00635B98 /* AttendingViewController.swift in Sources */,
 				527461241D4B1A4D0020347E /* ViewController.swift in Sources */,
 				523E31391D4B725400377F10 /* FavouriteMeetingDetails.swift in Sources */,
 				523E31071D4B244000377F10 /* RegisterViewController.swift in Sources */,
 				523E31111D4B32FA00377F10 /* ParticipatingCompaniesViewController.swift in Sources */,
 				523E310D1D4B297E00377F10 /* StudentRegisterDetails.swift in Sources */,
+				E5F2081F1D4CA92C00774F85 /* CreditsViewController.swift in Sources */,
 				523E31381D4B725400377F10 /* FavouriteMeetingDetails+CoreDataProperties.swift in Sources */,
 				527461221D4B1A4D0020347E /* AppDelegate.swift in Sources */,
 				523E31351D4B69EC00377F10 /* CompanyDetails.swift in Sources */,

@@ -8,36 +8,34 @@
 
 import UIKit
 
-class ParticipatingCompaniesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
+class AttendingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 {
     
-
+    
     @IBOutlet weak var companyTable: UITableView!
     
-    var companies = [CompanyDetails]()
+    var companies = [FavouriteMeetingDetails]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        
-      //  UINavigationBar.appearance().barTintColor = UIColor.brownColor()
-        self.title = "Participating Companies"
-        
-            //  UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         let coredataObj = CoreDataHelper()
         
-          companies = coredataObj.fetchCompanyDetails()
-          companyTable.reloadData()
+       // UINavigationBar.appearance().barTintColor = UIColor.brownColor()
+        self.title = "Attending Meetings"
+            //  UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        companies = coredataObj.fetchAttendingCompanyDetails()
+        companyTable.reloadData()
         
         let logButton : UIBarButtonItem = UIBarButtonItem(title: "Signout", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(StudentViewController.logout))
         self.navigationItem.rightBarButtonItem = logButton
         
+       
 
     }
-
     
     func logout()
     {
@@ -74,29 +72,34 @@ class ParticipatingCompaniesViewController: UIViewController,UITableViewDelegate
         cell.backView.layer.borderWidth = 1.0
         cell.backView.layer.cornerRadius = 5
         
-
+        
+        
         let  companyObj = companies[indexPath.row]
+        
         
         cell.companyName.text = companyObj.name
         cell.locationLabel.text = companyObj.location
         cell.dateLabel.text = companyObj.date
         cell.timeLabel.text = companyObj.time
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
-
+        
         return cell
-      
+        
     }
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         
-        let indexPath = self.companyTable.indexPathForSelectedRow!
-        let detail = self.storyboard?.instantiateViewControllerWithIdentifier("CompanyDetailsViewController") as! CompanyDetailsViewController
-        detail.idStr = indexPath.row
-        self.navigationController?.pushViewController(detail, animated: true)
+//        let indexPath = self.companyTable.indexPathForSelectedRow!
+//        let detail = self.storyboard?.instantiateViewControllerWithIdentifier("CompanyDetailsViewController") as! CompanyDetailsViewController
+//        detail.idStr = indexPath.row
+//        self.navigationController?.pushViewController(detail, animated: true)
+        
         
     }
+    
+    
+    
     
     
     
@@ -106,15 +109,15 @@ class ParticipatingCompaniesViewController: UIViewController,UITableViewDelegate
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -8,17 +8,45 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let eventStore = EKEventStore()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
         // Override point for customization after application launch.
-        saveCompanyDetails()
+        
+        
+        
+        eventStore.requestAccessToEntityType(EKEntityType.Reminder, completion:
+            {(granted, error) in
+                if !granted
+                {
+                    print("Access to store not granted")
+                    print(error!.localizedDescription)
+                }
+                else 
+                {
+                    print("Access granted")
+                }
+        })
+        if (NSUserDefaults.standardUserDefaults().objectForKey("onoroff") == nil)
+        {
+           // NSUserDefaults.standardUserDefaults().setBool(true, forKey: "onoroff")
+            
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "onoroff")
+            saveCompanyDetails()
+        }
+        else
+        {
+            
+
+        }
+
         return true
     }
 
@@ -53,27 +81,95 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
               
         var company1 = [String:String]()
-        company1["name"] = "Infosys"
-        company1["meetingDesc"] = "klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj klaslkdjlkj"
-        company1["date"] = "11-02-2016"
-        company1["time"] = "11:15AM"
+        company1["name"] = "CAP Tulsa"
+        company1["meetingDesc"] = "The major purpose of this meeting is to discuss about latest versions of Android OS and its new features.There would be power point presentation on connectivity between android device and watch."
+        company1["date"] = "11-08-2016"
+        company1["time"] = "11:15 AM"
         company1["offeringintern"] = "YES"
-        company1["website"] = "www.infosys.com"
-        company1["location"] = "Seminar Hall-1,Tower 4, NW University"
+        company1["website"] = "captulsa.org/careers/"
+        company1["location"] = " 1504 Eureka Rd #325, Roseville, CA "
         company1["id"] = "0"
 
 
+        var company2 = [String:String]()
+        company2["name"] = "SAP - SAP.com"
+        company2["meetingDesc"] = " A meeting on  solutions like S/4 HANA, Cloud 4 Customer, Hybris, Mobile and IoT are the essential enablers of this shift. Against this backdrop we created Mastering Customer Engagement with SAP Solutions.The world is changing. Customers are more demanding. Customer loyalty is decreasing. And the pressure is on for share of customer – attracting them, keeping them, seducing them."
+        company2["date"] = "11-09-2016"
+        company2["time"] = "03:30 PM"
+        company2["offeringintern"] = "NO"
+        company2["website"] = "https://www.sap.com/careers/"
+        company2["location"] = "1999 Avenue of the Stars,Los Angeles, CA "
+        company2["id"] = "1"
+
+        
+        
+        var company3 = [String:String]()
+        company3["name"] = "Factual"
+        company3["meetingDesc"] = "Our mission is to make the technology community better, more diverse, and more human; in short, we just want to make things better. JSConf does not focus on what is popular or cool now, but on topics that define and revolutionize the following year of technology. We have been the launching point for some of the most revolutionary products, services, and technologies on the web. We have also been the inspiration point and support base for a wide range of conferences beyond the JSConf name. Those awesome events are featured below, if you are near one, we strongly suggest you attend them!"
+        company3["date"] = "11-10-2016"
+        company3["time"] = "03:30 PM"
+        company3["offeringintern"] = "YES"
+        company3["website"] = "https://www.factual.com/jobs#problems"
+        company3["location"] = "111 W Illinois St. 5th Floor,Chicago"
+        company3["id"] = "2"
+        
+        
+        var company4 = [String:String]()
+        company4["name"] = "Inktank"
+        company4["meetingDesc"] = "The IoT Tech Expo Event will bring together key industries from across America for two days of top level content and discussion. Industries include Manufacturing, Transport, Health, Logistics, Government, Energy and Automotive. Introducing and exploring the latest innovations within the Internet of Things, this conference is not to be missed."
+        company4["date"] = "11-11-2016"
+        company4["time"] = "5:30 PM"
+        company4["offeringintern"] = "NO"
+        company4["website"] = "https://www.redhat.com/en/jobs"
+        company4["location"] = "100 East Davie Street Raleigh, NC "
+        company4["id"] = "3"
+        
+        var company5 = [String:String]()
+        company5["name"] = "Predixion Software"
+        company5["meetingDesc"] = "Conference on on Hadoop big data as there's a big revolution happening in the world of big data, using business intelligence and predictive analytics, and Predixion applying that to such verticals as healthcare."
+        company5["date"] = "11-11-2016"
+        company5["time"] = "11:00 AM"
+        company5["offeringintern"] = "YES"
+        company5["website"] = "https://www.predixionsoftware.com/careers"
+        company5["location"] = "100 John Haden Street, Aliso Viejo, CA "
+        company5["id"] = "4"
+        
+
+        
         
         let coredataObj = CoreDataHelper()
         
-        let boolVal = coredataObj.saveCompanyDetails(company1)
-        
-        if  boolVal==true
+        let boolVal1 = coredataObj.saveCompanyDetails(company1)
+        let boolVal2 = coredataObj.saveCompanyDetails(company2)
+        let boolVal3 = coredataObj.saveCompanyDetails(company3)
+        let boolVal4 = coredataObj.saveCompanyDetails(company4)
+        let boolVal5 = coredataObj.saveCompanyDetails(company5)
+
+        if  boolVal1==true
         {
 
 
         }
-        
+        if  boolVal2==true
+        {
+            
+            
+        }
+        if  boolVal3==true
+        {
+            
+            
+        }
+        if  boolVal4==true
+        {
+            
+            
+        }
+        if  boolVal5==true
+        {
+            
+            
+        }
         
         
         
@@ -145,6 +241,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    func dateComponentFromNSDate(date: NSDate)-> NSDateComponents{
+        
+        let calendarUnit: NSCalendarUnit = [.Hour, .Day, .Month, .Year]
+        let dateComponents = NSCalendar.currentCalendar().components(calendarUnit, fromDate: date)
+        return dateComponents
     }
 
 }

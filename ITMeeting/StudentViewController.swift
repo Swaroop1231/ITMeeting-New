@@ -22,6 +22,11 @@ class StudentViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        
+      //  UINavigationBar.appearance().barTintColor = UIColor.brownColor()
+        self.title = "DashBoard"
+         //     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         self.attendingMeetingBtn.layer.borderColor = whitecolor().CGColor
         self.attendingMeetingBtn.layer.borderWidth = 1.0
         self.attendingMeetingBtn.layer.cornerRadius = 5
@@ -36,7 +41,19 @@ class StudentViewController: UIViewController {
         self.favouriteBtn.layer.cornerRadius = 5
         
         
+        let logButton : UIBarButtonItem = UIBarButtonItem(title: "Signout", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(StudentViewController.logout))
+        self.navigationItem.rightBarButtonItem = logButton
+        
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
+        navigationItem.leftBarButtonItem = backButton
     }
+    
+    
+    func logout()
+    {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

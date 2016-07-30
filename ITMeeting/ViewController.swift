@@ -24,13 +24,13 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+        //UINavigationBar.appearance().barTintColor = UIColor.brownColor()
+        self.title = "Login"
+      //  UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+
         self.backView.layer.borderColor = whitecolor().CGColor
         self.backView.layer.borderWidth = 1.0
         self.backView.layer.cornerRadius = 5
-        
-        
         
         self.nameTextfield.layer.borderColor = whitecolor().CGColor
         self.nameTextfield.layer.borderWidth = 1.0
@@ -41,13 +41,21 @@ class ViewController: UIViewController
         self.passwordtextfield.layer.cornerRadius = 5
         
         
-        
         self.loginButton.layer.borderColor = whitecolor().CGColor
         self.loginButton.layer.borderWidth = 1.0
         self.loginButton.layer.cornerRadius = 5
 
         
+        nameTextfield.attributedPlaceholder = NSAttributedString(string:"User Name", attributes: [NSForegroundColorAttributeName: whitecolor()])
+        passwordtextfield.attributedPlaceholder = NSAttributedString(string:"Password", attributes: [NSForegroundColorAttributeName: whitecolor()])
         
+     
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        return textField.resignFirstResponder()
     }
     
     

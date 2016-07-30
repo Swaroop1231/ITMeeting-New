@@ -7,7 +7,7 @@
 //
 
 import CoreData
-
+import UIKit
 class CoreDataHelper: NSObject
 {
 
@@ -15,9 +15,7 @@ class CoreDataHelper: NSObject
     func saveStudentRegisterDetails(name : String , password:String)-> Bool
     {
         
-        
-        
-        let managedContext = AppDelegate().managedObjectContext
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
         let person = NSEntityDescription.insertNewObjectForEntityForName("StudentRegisterDetails", inManagedObjectContext: managedContext)
         
@@ -48,7 +46,7 @@ class CoreDataHelper: NSObject
     {
         
         
-        let managedContext = AppDelegate().managedObjectContext
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
         let predicate = NSPredicate(format: "name == %@ AND password == %@", name,password)
         
@@ -89,8 +87,7 @@ class CoreDataHelper: NSObject
     {
         
         
-        
-        let managedContext = AppDelegate().managedObjectContext
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
         let person = NSEntityDescription.insertNewObjectForEntityForName("CompanyDetails", inManagedObjectContext: managedContext)
         
@@ -129,9 +126,7 @@ class CoreDataHelper: NSObject
     func fetchCompanyDetails() -> [CompanyDetails]!
     {
         
-        
-        
-        let managedContext = AppDelegate().managedObjectContext
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
         let request :NSFetchRequest = NSFetchRequest(entityName: "CompanyDetails")
         request.returnsObjectsAsFaults = false
@@ -165,9 +160,7 @@ class CoreDataHelper: NSObject
     func fetchParticularCompanyDetails(idVal :String) -> CompanyDetails?
     {
         
-        
-        
-        let managedContext = AppDelegate().managedObjectContext
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
         let request :NSFetchRequest = NSFetchRequest(entityName: "CompanyDetails")
         let predicate = NSPredicate(format: "id == %@", idVal)
@@ -204,9 +197,7 @@ class CoreDataHelper: NSObject
     func favouriteMeetingDetails(dict : [String:String])-> Bool
     {
         
-        
-        
-        let managedContext = AppDelegate().managedObjectContext
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         
         let person = NSEntityDescription.insertNewObjectForEntityForName("FavouriteMeetingDetails", inManagedObjectContext: managedContext)
         
@@ -216,9 +207,6 @@ class CoreDataHelper: NSObject
         person.setValue(dict["time"], forKey: "time")
         person.setValue(dict["location"], forKey: "location")
         person.setValue(dict["id"], forKey: "id")
-        
-        
-        
         
         
         // save it
@@ -238,5 +226,41 @@ class CoreDataHelper: NSObject
         //   return false
         
     }
+    
+    
+    func fetchAttendingCompanyDetails() -> [FavouriteMeetingDetails]!
+    {
+        
+        let managedContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let request :NSFetchRequest = NSFetchRequest(entityName: "FavouriteMeetingDetails")
+        request.returnsObjectsAsFaults = false
+        //  let error: NSError? = nil
+        
+        var matches = [FavouriteMeetingDetails]()
+        
+        do
+        {
+            
+            matches = try managedContext.executeFetchRequest(request) as! [FavouriteMeetingDetails]
+            if matches.count > 0
+            {
+                return matches
+            }
+            else
+            {
+                
+                
+            }
+            
+        } catch
+        {
+            // handle error
+        }
+        
+        return []
+    }
+    
+
 
 }

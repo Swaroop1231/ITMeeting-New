@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import EventKit
 class CompanyDetailsViewController: UIViewController {
 
     @IBOutlet weak var companyName: UILabel!
@@ -26,14 +26,18 @@ class CompanyDetailsViewController: UIViewController {
     @IBOutlet weak var meetDesc: UILabel!
     
     var idStr = Int()
+    var setWebsite = String()
+    //var eventStore: EKEventStore!
+
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        
-        
+      //  UINavigationBar.appearance().barTintColor = UIColor.brownColor()
+        self.title = "Company Details"
+             // UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.remainderBtn.layer.borderColor = whitecolor().CGColor
         self.remainderBtn.layer.borderWidth = 1.0
         self.remainderBtn.layer.cornerRadius = 5
@@ -66,7 +70,9 @@ class CompanyDetailsViewController: UIViewController {
         self.meetDesc.text = companies!.meetingdescription
         self.timelabel.text = companies!.time
         self.locationLabel.text = companies!.location
-
+        setWebsite=companies!.website!
+        
+        
         if companies!.offeringintern == "YES"
         {
             applyButton.hidden=false
@@ -78,11 +84,19 @@ class CompanyDetailsViewController: UIViewController {
             checkImageView.image = UIImage.init(named: "cross")
         }
         
+        let logButton : UIBarButtonItem = UIBarButtonItem(title: "Signout", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(StudentViewController.logout))
+        self.navigationItem.rightBarButtonItem = logButton
         
+       
 
         // Do any additional setup after loading the view.
     }
     
+    func logout()
+    {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+
     func whitecolor()->UIColor
     {
         
@@ -113,7 +127,10 @@ class CompanyDetailsViewController: UIViewController {
         
         if  boolVal==true
         {
-            print("added")
+          //  print("added")
+            
+            let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AttendingViewController") as! AttendingViewController
+            self.navigationController?.pushViewController(detail, animated: true)
             
         }
         else
@@ -125,16 +142,76 @@ class CompanyDetailsViewController: UIViewController {
         
     }
 
-    @IBAction func setremainderAction(sender: AnyObject) {
+    @IBAction func setremainderAction(sender: AnyObject)
+    {
+    
+        createReminder()
+    
     }
-    @IBAction func applyButtonAction(sender: AnyObject) {
+    
+    //MARK: Helper method to convert the NSDate to NSDateComponents
+    
+    
+    @IBAction func applyButtonAction(sender: AnyObject)
+    {
+     
+        if let url = NSURL(string: setWebsite){
+            UIApplication.sharedApplication().openURL(url)
+        }
+        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func createReminder()
+    {
+        
 
+        
+        
+        let reminder = EKReminder(eventStore: (UIApplication.sharedApplication().delegate as! AppDelegate).eventStore)
+        
+        reminder.title = companyName.text!
+        reminder.calendar =
+            (UIApplication.sharedApplication().delegate as! AppDelegate).eventStore.defaultCalendarForNewReminders()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        //print (dateFormatter.dateFromString(datelabel.text!))
+        
+        let date = dateFormatter.dateFromString(datelabel.text!)
+        let alarm = EKAlarm(absoluteDate: date!)
+        
+        reminder.addAlarm(alarm)
+        
+        
+        do
+        {
+            try (UIApplication.sharedApplication().delegate as! AppDelegate).eventStore.saveReminder(reminder, commit: true)
+            dismissViewControllerAnimated(true, completion: nil)
+            
+            
+            let alertController = UIAlertController(title: "Alert.!", message: "Remainder set.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+
+        }
+        catch
+        {
+            print("Error creating and saving new reminder : \(error)")
+        }
+        
+//        var error: NSError?
+//       (UIApplication.sharedApplication().delegate as! AppDelegate).eventStore.saveReminder(reminder,
+//                                              commit: true, error: & error)
+//        
+//        if error != nil {
+//            print("Reminder failed with error \(error?.localizedDescription)")
+//        }
+    }
     /*
     // MARK: - Navigation
 
